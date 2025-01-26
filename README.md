@@ -17,14 +17,19 @@
 ## How to use repo:
 1. Sign in to your AWS console
 2. At the bottom left of your screen click the Cloudshell icon that opens the cloud terminal
-3. Write the following:
+3. Run this code then paste the code from this file:
        nano setup_nba_data_lake.py
 4. Find the line of code under #Sportsdata.io configurations that says "api_key" paste your api key inside the quotation. Also edit the bucket name to be unique
 5. Press ^X to exit, press Y to save the file, press enter to confirm the file name
 6. In the CLI type
       python3 setup_nba_data_lake.py
-
-You will find the resources created in the relevant resource oages eg. you will find a bucket created
+7. To delete the resources created you can open a new file:
+      nano delete_aws_resources.py
+8. Copy the code in this file on the repo
+9. Exit and run the following
+   python3 delete_aws_resources
+   
+You will find the resources created in the relevant resource pages eg. you will find a bucket created
 
 NOTE: Hardcoding sensitive data is not recommended. The safe approach is to use a .env file to store the sensitive data and editing your setuo_nba_data_lake.py code to load the keys from the .env file
 
